@@ -10,6 +10,7 @@ function main_menu() {
     echo "2. cat Key"
     echo "3. User Manager"
     echo "4. Git Loader"
+    echo "5. Installer"
     echo "0. Exit"
     echo
     echo "Please enter your choice: "
@@ -38,6 +39,11 @@ function menu_options() {
             echo "Git Loader"
              echo "_________________________________"
             bash ./modules/Gitloader.sh
+            ;;
+            5)
+            echo "All in one Installer"
+              echo "_________________________________"
+              bash ./modules/run_script.sh
             ;;
         0) 
             echo "Exiting the program"
