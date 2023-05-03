@@ -1,5 +1,4 @@
-  GNU nano 6.2                                                 SSHKey4Git.sh                                                           
- 
+#!/bin/bash
 echo "instruction : The SSH Key should be named id_ed25519 which is defult Github key name "
 cd ~/.ssh
 ls
@@ -9,7 +8,7 @@ echo "Enter your email address:"
 read email
 
 # Retrieve the private and public key names
-echo "Enter the name of your private key file (e.g., id_rsa):"
+echo "Enter the name of your private key file (e.g., id_ed25519):"
 read private_key
 public_key="${private_key}.pub"
 ssh-keygen -t ed25519 -b 4096 -C "$email" -f ~/.ssh/${private_key}

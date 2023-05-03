@@ -6,9 +6,9 @@ function main_menu() {
     echo "----------------------------------"
     echo " MAIN MENU"
     echo "----------------------------------"
-    echo "1. SSH Key 4Git"
-    echo "2. Run Module 2"
-    echo "3. Run Module 3"
+    echo "1. SSH Key4Git"
+    echo "2. cat Key"
+    echo "3. User Manager"
     echo "4. Run Module 4"
     echo "0. Exit"
     echo
@@ -21,16 +21,18 @@ function main_menu() {
 function menu_options() {
     case $selection in
         1) 
-            echo "Running Module 1"
-            bash ./module/module1.sh
+            echo "SSH Key 4 Git"
+            bash ./modules/Key4Git.sh
             ;;
         2) 
-            echo "Running Module 2"
-            bash ./module/module2.sh
+            echo "Public Key"
+            echo "_________________________________"
+            bash ./modules/cat_Key.sh
             ;;
         3)
-            echo "Running Module 3"
-            bash ./module/module3.sh
+            echo "User Manager"
+              echo "_________________________________"
+            bash ./modules/user_man.sh
             ;;
         4)
             echo "Running Module 4"
