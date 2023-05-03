@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Set the directory to clone the repository to
-CLONE_DIR=${1:-"/default/path"} # Default value is "/default/path"
+# Ask user for the directory to clone the repository to
+read -p "Enter the directory to clone the repository to: " CLONE_DIR
 
 # Set the SSH address of the repository
-REPO_SSH=${2:-"git@github.com:username/repo.git"} # Default value is "git@github.com:username/repo.git"
+REPO_SSH="git@github.com:0x134134k/Slider.git"
 
 # Create the directory if it doesn't exist
 mkdir -p "$CLONE_DIR"
@@ -25,6 +25,11 @@ mkdir -p "$REPO_NAME"
 cd "$REPO_NAME"
 
 # Clone the repository with SSH
-GIT_SSH_COMMAND="ssh -i $SSH_KEY_FILE" git clone "$REPO_SSH" .
-
-echo "Repository cloned successfully to $CLONE_DIR/$REPO_NAME"
+if GIT_SSH_COMMAND="ssh -i $SSH_KEY_FILE" git clone "$REPO_SSH" .
+then
+    echo "Repository cloned successfully to $CLONE_DIR/$REPO_NAME"
+else
+    echo "Failed to clone the repository"
+fi
+  
+  sleep 1000

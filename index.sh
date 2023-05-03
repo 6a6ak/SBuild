@@ -9,7 +9,7 @@ function main_menu() {
     echo "1. SSH Key4Git"
     echo "2. cat Key"
     echo "3. User Manager"
-    echo "4. Run Module 4"
+    echo "4. Git Loader"
     echo "0. Exit"
     echo
     echo "Please enter your choice: "
@@ -35,8 +35,9 @@ function menu_options() {
             bash ./modules/user_man.sh
             ;;
         4)
-            echo "Running Module 4"
-            bash ./module/module4.sh
+            echo "Git Loader"
+             echo "_________________________________"
+            bash ./modules/Gitloader.sh
             ;;
         0) 
             echo "Exiting the program"
