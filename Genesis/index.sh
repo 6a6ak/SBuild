@@ -46,7 +46,7 @@ function menu_options() {
             #copy this for authorize
             cat ~/.ssh/${public_key}
 
-            #add to ssh  agent
+            # add to ssh  agent
             eval "$(ssh-agent -s)"
             #it can be id_ed_25519 or id_ed25519
             ssh-add ~/.ssh/id_ed_25519
